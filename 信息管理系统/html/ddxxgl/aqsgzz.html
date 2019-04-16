@@ -4,6 +4,24 @@
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
+		<script>
+			    $(document).ready(function () {
+			        var time = new Date();
+			        var day = ("0" + time.getDate()).slice(-2);
+			        var month = ("0" + (time.getMonth() + 1)).slice(-2);
+			        var today = time.getFullYear() + "-" + (month) + "-" + (day);
+			        $('#starttime').val(today);
+			    })
+			</script>
+		<script>
+			    $(document).ready(function () {
+			        var time = new Date();
+			        var day = ("0" + time.getDate()).slice(-2);
+			        var month = ("0" + (time.getMonth() + 2)).slice(-2);
+			        var today = time.getFullYear() + "-" + (month) + "-" + (day);
+			        $('#endtime').val(today);
+			    })
+			</script>
 		<style>
 			select {
 				font-size: 17px;

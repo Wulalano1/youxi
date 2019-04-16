@@ -5,6 +5,24 @@
 		<meta charset="UTF-8">
 		<title></title>
 		<link rel="stylesheet" href="js/layer/mobile/need/layer.css" />
+		<script>
+			    $(document).ready(function () {
+			        var time = new Date();
+			        var day = ("0" + time.getDate()).slice(-2);
+			        var month = ("0" + (time.getMonth() + 1)).slice(-2);
+			        var today = time.getFullYear() + "-" + (month) + "-" + (day);
+			        $('#starttime').val(today);
+			    })
+			</script>
+		<script>
+			    $(document).ready(function () {
+			        var time = new Date();
+			        var day = ("0" + time.getDate()).slice(-2);
+			        var month = ("0" + (time.getMonth() + 2)).slice(-2);
+			        var today = time.getFullYear() + "-" + (month) + "-" + (day);
+			        $('#endtime').val(today);
+			    })
+			</script>
 		<style>
 			#Table1,
 			#Table2 {
@@ -117,7 +135,7 @@
 						</select>
 					</td>
 					<td>辨识日期：</td>
-					<td>起始日期：<input type="date" id="starttime" /><br>结束日期：<input type="date" id="endtime" /><br></td>
+					<td>起始日期：<input type="date" id="starttime"/><br>结束日期：<input type="date" id="endtime" /><br></td>
 					<td></td>
 					<td><button type="button" class="btn_tj" id="btn_sel"><i class="iconfont icon-chaxun"></i>查询</button></td>
 				</tr>
