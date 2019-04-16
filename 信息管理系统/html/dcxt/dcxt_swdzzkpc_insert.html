@@ -4,6 +4,25 @@
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
+		
+		<script>
+			    $(document).ready(function () {
+			        var time = new Date();
+			        var day = ("0" + time.getDate()).slice(-2);
+			        var month = ("0" + (time.getMonth() + 1)).slice(-2);
+			        var today = time.getFullYear() + "-" + (month) + "-" + (day);
+			        $('#starttime').val(today);
+			    })
+			</script>
+		<script>
+			    $(document).ready(function () {
+			        var time = new Date();
+			        var day = ("0" + time.getDate()).slice(-2);
+			        var month = ("0" + (time.getMonth() + 2)).slice(-2);
+			        var today = time.getFullYear() + "-" + (month) + "-" + (day);
+			        $('#endtime').val(today);
+			    })
+			</script>
 		<style>
 			#Table1 {
 				width: 80%;
@@ -110,13 +129,13 @@
 			<table id="Table1" border="1" cellspacing="0" cellpadding="5px">
 				<tr>
 					<td>排查日期：</td>
-					<td colspan="3"><input type="date" id="pc_time" name="pcrq" /> </td>
+					<td colspan="3"><input type="date" id="starttime" name="pcrq" /> </td>
 				</tr>
 				<tr>
 					<td>钻孔位置：</td>
 					<td><input id="input_zkwz" name="zkwz"/></td>
 					<td>开孔日期：</td>
-					<td><input type="date" id="kk_time" name="kkrq" /> </td>
+					<td><input type="date" id="endtime" name="kkrq" /> </td>
 				</tr>
 				<tr>
 					<td>钻孔编号：</td>
