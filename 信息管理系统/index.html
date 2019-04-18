@@ -3,6 +3,104 @@
 
 <head>
 	<meta charset="utf-8">
+	<style>
+		#Table1 {
+			width: 80%;
+			margin: auto;
+			margin-top: 20px;
+			/*padding: 10px 0px 0px 50px;*/
+			/*text-align: center;*/
+			border: 1px solid #30a5ff;
+			font-size: 14px;
+			color: #30a5ff;
+		}
+		
+		#Table1 tr td:nth-of-type(1) {
+			text-align: right;
+		}
+		
+		#Table1 tr td:nth-of-type(3) {
+			text-align: right;
+		}
+		
+		#Table1 input {
+			/*width: 50%;*/
+			/*height: 20px;*/
+			padding: 2px;
+			margin: 4px;
+		}
+		
+		.btn_item {
+			width: 80%;
+			margin: auto;
+			margin-top: 20px;
+			text-align: center;
+		}
+		
+		.btn_tj,
+		.btn_qk {
+			border: 0px;
+			border-radius: 3px;
+			color: white;
+			width: 80px;
+			height: 30px;
+			font-size: 14px;
+			background-color: #30a5ff;
+			margin: 0 50px;
+		}
+		
+		.btn_tj:hover,
+		.btn_qk:hover {
+			cursor: pointer;
+			background-color: #428bca;
+		}
+		
+		.btn_xiazai {
+			border: 0px;
+			border-radius: 3px;
+			color: white;
+			width: 120px;
+			height: 30px;
+			font-size: 14px;
+			background-color: #30a5ff;
+		}
+		
+		.btn_sc {
+			border: 0px;
+			border-radius: 3px;
+			color: white;
+			width: 120px;
+			height: 30px;
+			font-size: 14px;
+			background-color: #30a5ff;
+		}
+		
+		.btn_xiazai:hover,
+		.btn_sc:hover {
+			cursor: pointer;
+			background-color: #428bca;
+		}
+		
+		.xiazaiAnddr {
+			width: 80%;
+			height: auto;
+			margin: auto;
+			/*margin-left: 20px;*/
+			margin-top: 20px;
+		}
+		
+		.file_item {
+			position: relative;
+		}
+		
+		#input_file {
+			width: 300px;
+			height: 30px;
+			position: absolute;
+			right: 0;
+			opacity: 0;
+		}
+	</style>
 	<meta name="renderer"
 		  content="webkit">
 	<title>信息管理系统</title>
@@ -607,11 +705,43 @@
 					<li>
 						<a href="./index.html">首页</a>
 					</li>
-					<li class="active1">矿井地质</li>
+				
 				</ul>
 			</div>
 			<div class="eq_form">
-
+				<form method="post" action="#" id="Form1" enctype="multipart/form-data">
+			
+					<table id="Table1" border="1" cellspacing="0" cellpadding="5px">
+						<tr>
+							<td>数据编号：</td>
+							<td colspan="3"><input id="pc_time" name="id" /> </td>
+						</tr>
+						<tr style="display:none">
+							<td>用户所属部门名称：</td>
+							<td colspan="3"><input id="ssqymc" name="ssqymc" /> </td>
+						</tr><tr>
+							<td>用户名：</td>
+							<td><input id="swqk" name="yhmdd" /> </td>
+							<td>用户密码：</td>
+							<td><input id="kkqk" name="yhmm" /> </td>
+						</tr>
+						<tr>
+							<td>用户所属部门：</td>
+		
+							<td colspan="3"><input id="input_zkwz_yhgl" name="ssmk" placeholder="请选择或手工输入" deptsprop="yhgl" style="display:none"/><br />
+								<select id="sel_zkwz_yhgl">
+									<option value ="1">请选择或手工输入</option>
+								</select>
+							</td>
+						</tr>
+		
+						
+					</table>
+					<div class="btn_item">
+						<button type="button" class="btn_tj" id="btn_tj"><i class="iconfont icon-tijiao"></i>提交</button>
+						<button id="btn_qk" type="button" class="btn_qk"><i class="iconfont icon-qingkong"></i>清空</button>
+					</div>
+				</form>
 
 			</div>
 
